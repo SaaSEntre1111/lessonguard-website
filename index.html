@@ -5,124 +5,127 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>LessonGuard – Income Protection for Driving Instructors</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
-
 <style>
 
 :root {
-  --navy:#12264D;
-  --navy-dark:#0E1E3A;
-  --green:#39A852;
-  --light:#F7F9FC;
+  --navy: #12264D;
+  --navy-dark: #0E1E3A;
+  --green: #39A852;
+  --light: #F7F9FC;
 }
 
 body {
-  margin:0;
-  font-family:'Inter',sans-serif;
-  background:var(--light);
-  color:var(--navy);
-  overflow-x:hidden;
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background: var(--light);
+  color: var(--navy);
+  line-height: 1.6;
 }
 
 section {
-  padding:100px 20px;
+  padding: 100px 20px;
 }
 
 .container {
-  max-width:1100px;
-  margin:auto;
+  max-width: 1100px;
+  margin: auto;
 }
 
-h1 { font-size:48px; font-weight:800; }
-h2 { font-size:36px; font-weight:700; }
+h1 {
+  font-size: 48px;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
 
-p { font-size:18px; }
+h2 {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+p {
+  font-size: 18px;
+  color: #445;
+}
 
 .hero {
-  background:linear-gradient(135deg,var(--navy),var(--navy-dark));
-  color:white;
-  text-align:center;
-  padding:140px 20px;
+  background: linear-gradient(135deg, var(--navy), var(--navy-dark));
+  color: white;
+  text-align: center;
+  padding: 140px 20px;
+}
+
+.hero p {
+  color: #d8e2f2;
 }
 
 .button {
-  display:inline-block;
-  padding:16px 32px;
-  background:var(--green);
-  color:white;
-  border-radius:8px;
-  text-decoration:none;
-  font-weight:600;
-  margin-top:30px;
-  box-shadow:0 10px 25px rgba(0,0,0,0.25);
-  transition:0.2s;
+  display: inline-block;
+  padding: 16px 32px;
+  background: var(--green);
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
+  margin-top: 30px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  transition: all 0.2s ease;
 }
 
-.button:hover { transform:translateY(-2px); }
-
-.card {
-  background:white;
-  padding:30px;
-  border-radius:12px;
-  box-shadow:0 10px 30px rgba(0,0,0,0.05);
+.button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.25);
 }
 
 .grid {
-  display:grid;
-  gap:40px;
+  display: grid;
+  gap: 40px;
 }
 
 .grid-3 {
-  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 }
 
-.dark {
-  background:var(--navy-dark);
-  color:white;
-  text-align:center;
+.card {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
 }
 
-.dashboard-mock {
-  background:white;
-  height:350px;
-  border-radius:20px;
-  box-shadow:0 30px 60px rgba(0,0,0,0.15);
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  font-size:22px;
-  color:#999;
+.dark-section {
+  background: var(--navy-dark);
+  color: white;
+  text-align: center;
 }
 
-.fade {
-  opacity:0;
-  transform:translateY(30px);
-  transition:all 0.8s ease;
+.dark-section p {
+  color: #cdd8f0;
 }
 
-.fade.visible {
-  opacity:1;
-  transform:translateY(0);
-}
-
-.countdown {
-  font-size:24px;
-  font-weight:700;
-  margin-top:20px;
-}
-
-input[type="email"] {
-  padding:15px;
-  width:300px;
-  border-radius:8px;
-  border:1px solid #ddd;
-  margin-top:20px;
+.pricing-box {
+  background: white;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+  text-align: center;
 }
 
 .footer {
-  background:var(--navy);
-  color:white;
-  text-align:center;
-  padding:60px 20px;
+  background: var(--navy);
+  color: white;
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.badges img {
+  height: 50px;
+  margin: 10px;
+}
+
+@media(max-width:768px){
+  h1 { font-size: 36px; }
+  h2 { font-size: 28px; }
 }
 
 </style>
@@ -130,99 +133,77 @@ input[type="email"] {
 <body>
 
 <section class="hero">
-  <div class="container fade">
+  <div class="container">
     <h1>Stop Losing Money on Missed Driving Lessons</h1>
-    <p>Income protection for independent driving instructors.</p>
-    <a href="#founding" class="button">Join Founding Launch</a>
-    <div class="countdown" id="countdown"></div>
+    <p>LessonGuard protects your income with automated reminders, enforced cancellations, and automatic payments.</p>
+    <a href="#" class="button">Start Free Trial</a>
+    <p style="margin-top:15px;font-size:14px;">No contract. Cancel anytime.</p>
   </div>
 </section>
 
 <section>
-  <div class="container fade">
-    <h2>Preview Dashboard</h2>
-    <div class="dashboard-mock">
-      Dashboard Preview – Final Version Launching Soon
-    </div>
+  <div class="container">
+    <h2>Missed Lessons Are Costing You More Than You Think</h2>
+    <p>2 missed lessons per month at £35 = £840 per year.</p>
+    <p>LessonGuard only needs to save one lesson to pay for itself.</p>
   </div>
 </section>
 
 <section>
-  <div class="container grid grid-3 fade">
+  <div class="container grid grid-3">
     <div class="card">
       <h3>Automated Reminders</h3>
-      <p>Reduce no-shows automatically.</p>
+      <p>Reduce no-shows without lifting a finger.</p>
     </div>
     <div class="card">
       <h3>Cancellation Enforcement</h3>
-      <p>No awkward payment chasing.</p>
+      <p>No more awkward conversations.</p>
     </div>
     <div class="card">
-      <h3>Stripe Payments</h3>
-      <p>Secure, automatic payments.</p>
+      <h3>Automatic Payments</h3>
+      <p>Stripe-powered. Direct to your account.</p>
     </div>
   </div>
 </section>
 
-<section class="dark" id="founding">
-  <div class="container fade">
-    <h2>Founding Instructor Offer</h2>
-    <p>First 50 instructors get priority onboarding and discounted lifetime pricing.</p>
-    <form action="https://formsubmit.co/leelowther2021@gmail.com" method="POST">
-      <input type="email" name="email" placeholder="Enter your email" required>
-      <br>
-      <button type="submit" class="button">Reserve My Spot</button>
-    </form>
-    <p style="margin-top:20px;font-size:14px;">Secure payments powered by Stripe</p>
+<section class="dark-section">
+  <div class="container">
+    <h2>It Pays for Itself Fast</h2>
+    <p>One saved lesson = covered subscription.</p>
+    <a href="#" class="button">Protect My Income</a>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <h2>Simple Pricing</h2>
+    <div class="grid grid-3">
+      <div class="pricing-box">
+        <h3>Monthly</h3>
+        <p style="font-size:32px;font-weight:700;">£29</p>
+        <p>Cancel anytime</p>
+      </div>
+      <div class="pricing-box">
+        <h3>Annual</h3>
+        <p style="font-size:32px;font-weight:700;">£290</p>
+        <p>2 months free</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container badges" style="text-align:center;">
+    <h2>Available on</h2>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg">
+    <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg">
   </div>
 </section>
 
 <div class="footer">
   <p>LessonGuard – Income Protection for Driving Instructors</p>
-  <p>UK GDPR compliant • Secure Stripe payments</p>
+  <p>Secure payments via Stripe • UK GDPR compliant</p>
 </div>
-
-<script>
-
-// Scroll Fade Animation
-const faders = document.querySelectorAll('.fade');
-
-const appearOptions = {
-  threshold:0.2
-};
-
-const appearOnScroll = new IntersectionObserver(function(entries,observer){
-  entries.forEach(entry=>{
-    if(!entry.isIntersecting) return;
-    entry.target.classList.add('visible');
-    observer.unobserve(entry.target);
-  });
-}, appearOptions);
-
-faders.forEach(fader=>{
-  appearOnScroll.observe(fader);
-});
-
-// Countdown Timer
-const launchDate = new Date("July 1, 2026 00:00:00").getTime();
-
-const x = setInterval(function(){
-  const now = new Date().getTime();
-  const distance = launchDate - now;
-
-  const days = Math.floor(distance / (1000*60*60*24));
-  const hours = Math.floor((distance % (1000*60*60*24)) / (1000*60*60));
-
-  document.getElementById("countdown").innerHTML =
-    days + " days " + hours + " hours until launch";
-
-  if(distance < 0){
-    clearInterval(x);
-    document.getElementById("countdown").innerHTML = "Now Live";
-  }
-},1000);
-
-</script>
 
 </body>
 </html>
