@@ -4,149 +4,199 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>LessonGuard – Income Protection for Driving Instructors</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
 <style>
+
+:root {
+  --navy: #12264D;
+  --navy-dark: #0E1E3A;
+  --green: #39A852;
+  --light: #F7F9FC;
+}
+
 body {
   margin: 0;
   font-family: 'Inter', sans-serif;
-  background: #F7F9FC;
-  color: #12264D;
+  background: var(--light);
+  color: var(--navy);
   line-height: 1.6;
 }
+
 section {
-  padding: 80px 20px;
+  padding: 100px 20px;
+}
+
+.container {
   max-width: 1100px;
   margin: auto;
 }
-h1, h2 {
+
+h1 {
+  font-size: 48px;
+  font-weight: 800;
   margin-bottom: 20px;
 }
-h1 {
-  font-size: 42px;
-}
+
 h2 {
-  font-size: 32px;
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 20px;
 }
+
 p {
-  margin-bottom: 15px;
+  font-size: 18px;
+  color: #445;
 }
+
 .hero {
-  background: #12264D;
+  background: linear-gradient(135deg, var(--navy), var(--navy-dark));
   color: white;
   text-align: center;
+  padding: 140px 20px;
 }
+
 .hero p {
-  color: #d9e2f1;
+  color: #d8e2f2;
 }
+
 .button {
   display: inline-block;
-  padding: 14px 28px;
-  background: #39A852;
+  padding: 16px 32px;
+  background: var(--green);
   color: white;
   text-decoration: none;
-  border-radius: 6px;
-  font-weight: 600;
-  margin-top: 20px;
-}
-.button:hover {
-  background: #2f8e44;
-}
-.dark {
-  background: #0E1E3A;
-  color: white;
-  text-align: center;
-}
-.pricing-box {
-  border: 1px solid #ddd;
-  padding: 30px;
   border-radius: 8px;
-  text-align: center;
-  background: white;
+  font-weight: 600;
+  margin-top: 30px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  transition: all 0.2s ease;
 }
+
+.button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.25);
+}
+
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 30px;
+  gap: 40px;
 }
-.footer {
-  text-align: center;
-  font-size: 14px;
-  padding: 40px 20px;
-  background: #12264D;
+
+.grid-3 {
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.card {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+}
+
+.dark-section {
+  background: var(--navy-dark);
   color: white;
+  text-align: center;
 }
+
+.dark-section p {
+  color: #cdd8f0;
+}
+
+.pricing-box {
+  background: white;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+  text-align: center;
+}
+
+.footer {
+  background: var(--navy);
+  color: white;
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.badges img {
+  height: 50px;
+  margin: 10px;
+}
+
+@media(max-width:768px){
+  h1 { font-size: 36px; }
+  h2 { font-size: 28px; }
+}
+
 </style>
 </head>
 <body>
 
 <section class="hero">
-  <h1>Stop Losing Money on Missed Driving Lessons</h1>
-  <p>LessonGuard protects your income with automated reminders, enforced cancellations, and automatic payments.</p>
-  <p>✔ Fewer no-shows<br>✔ No awkward payment chasing<br>✔ Professional setup in minutes</p>
-  <a href="#" class="button">Start Free Trial</a>
-  <p style="margin-top:10px;font-size:14px;">No contract. Cancel anytime.</p>
-</section>
-
-<section>
-  <h2>Missed Lessons Are Costing You More Than You Think</h2>
-  <p>2 missed lessons a month at £35 = £840 per year.</p>
-  <p>4 missed lessons? £1,680 gone.</p>
-  <p><strong>Empty slots don’t pay the bills.</strong></p>
-</section>
-
-<section>
-  <h2>Income Protection for Driving Instructors</h2>
-  <p>Most instructor apps help you manage bookings.</p>
-  <p><strong>LessonGuard makes sure you get paid for them.</strong></p>
-  <p>– Automatic reminders<br>
-     – Enforced cancellation policy<br>
-     – Automatic Stripe payments<br>
-     – Clear income dashboard</p>
-  <a href="#" class="button">Protect My Income</a>
-</section>
-
-<section>
-  <h2>How It Works</h2>
-  <div class="grid">
-    <div>
-      <h3>1. Add Your Students</h3>
-      <p>Enter names and numbers.</p>
-    </div>
-    <div>
-      <h3>2. Schedule Lessons</h3>
-      <p>Set your dates and cancellation rules.</p>
-    </div>
-    <div>
-      <h3>3. Get Paid Automatically</h3>
-      <p>Reminders go out. Invoices are sent. Money lands in your account.</p>
-    </div>
-  </div>
-</section>
-
-<section class="dark">
-  <h2>It Pays for Itself Fast</h2>
-  <p>1 saved lesson per month = £35 recovered</p>
-  <p>Monthly cost = £29</p>
-  <p><strong>You’re already ahead.</strong></p>
-  <a href="#" class="button">Start Protecting My Lessons</a>
-</section>
-
-<section>
-  <h2>Simple Pricing</h2>
-  <div class="grid">
-    <div class="pricing-box">
-      <h3>Monthly</h3>
-      <p style="font-size:28px;"><strong>£29</strong> / month</p>
-      <p>Cancel anytime</p>
-    </div>
-    <div class="pricing-box">
-      <h3>Annual</h3>
-      <p style="font-size:28px;"><strong>£290</strong> / year</p>
-      <p>2 months free</p>
-    </div>
-  </div>
-  <div style="text-align:center;">
+  <div class="container">
+    <h1>Stop Losing Money on Missed Driving Lessons</h1>
+    <p>LessonGuard protects your income with automated reminders, enforced cancellations, and automatic payments.</p>
     <a href="#" class="button">Start Free Trial</a>
+    <p style="margin-top:15px;font-size:14px;">No contract. Cancel anytime.</p>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <h2>Missed Lessons Are Costing You More Than You Think</h2>
+    <p>2 missed lessons per month at £35 = £840 per year.</p>
+    <p>LessonGuard only needs to save one lesson to pay for itself.</p>
+  </div>
+</section>
+
+<section>
+  <div class="container grid grid-3">
+    <div class="card">
+      <h3>Automated Reminders</h3>
+      <p>Reduce no-shows without lifting a finger.</p>
+    </div>
+    <div class="card">
+      <h3>Cancellation Enforcement</h3>
+      <p>No more awkward conversations.</p>
+    </div>
+    <div class="card">
+      <h3>Automatic Payments</h3>
+      <p>Stripe-powered. Direct to your account.</p>
+    </div>
+  </div>
+</section>
+
+<section class="dark-section">
+  <div class="container">
+    <h2>It Pays for Itself Fast</h2>
+    <p>One saved lesson = covered subscription.</p>
+    <a href="#" class="button">Protect My Income</a>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <h2>Simple Pricing</h2>
+    <div class="grid grid-3">
+      <div class="pricing-box">
+        <h3>Monthly</h3>
+        <p style="font-size:32px;font-weight:700;">£29</p>
+        <p>Cancel anytime</p>
+      </div>
+      <div class="pricing-box">
+        <h3>Annual</h3>
+        <p style="font-size:32px;font-weight:700;">£290</p>
+        <p>2 months free</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container badges" style="text-align:center;">
+    <h2>Available on</h2>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg">
+    <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg">
   </div>
 </section>
 
